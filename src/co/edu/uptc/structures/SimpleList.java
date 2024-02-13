@@ -1,4 +1,4 @@
-package co.edu.uptc.model;
+package co.edu.uptc.structures;
 
 public class SimpleList<E> {
 	private Node<E> head;

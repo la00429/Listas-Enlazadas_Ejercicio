@@ -1,4 +1,4 @@
-package co.edu.uptc.model;
+package co.edu.uptc.structures;
 
 public class Node<E> {
 	private E data;

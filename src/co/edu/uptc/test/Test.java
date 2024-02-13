@@ -1,11 +1,11 @@
 package co.edu.uptc.test;
 
-import co.edu.uptc.model.SimpleList;
+import co.edu.uptc.structures.SimpleList;
 import co.edu.uptc.view.View;
 
 public class Test {
 	private final String MENU = "1. Insertar dato" + "\n" + "2. Verificar existencia" + "\n" + "3. Remover dato" + "\n"
-			+ "4. Verifar lista vacia" +"\n"+ "5. Mostrar lista" + "\n" + "0. salir";
+			+ "4. Verifar lista vacia" + "\n" + "5. Mostrar lista" + "\n" + "0. salir";
 
 	private SimpleList<Integer> list;
 	private View view;

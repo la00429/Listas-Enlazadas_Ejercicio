@@ -1,7 +1,7 @@
 package co.edu.uptc.test;
 
-import co.edu.uptc.model.SimpleList;
 import co.edu.uptc.model.Student;
+import co.edu.uptc.structures.SimpleList;
 
 public class TestStudent {
 
@@ -10,6 +10,7 @@ public class TestStudent {
 		Student student2 = new Student("Vanessa", 10);
 		Student student3 = new Student("Sofía", 19);
 		SimpleList<Student> listStudent = new SimpleList<Student>();
+		System.out.println("LISTA VACIA" + listStudent.isEmpty());
 		listStudent.insert(student1);
 		listStudent.insert(student2);
 		listStudent.insert(student3);
@@ -18,10 +19,8 @@ public class TestStudent {
 		listStudent.remove(student1);
 		System.out.println(listStudent.show());
 		listStudent.remove(student3);
+		System.out.println(listStudent.isEmpty());
 		System.out.println(listStudent.show());
-		
-		
-		
 
 	}
 
