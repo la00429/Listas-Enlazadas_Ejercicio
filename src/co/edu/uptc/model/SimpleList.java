@@ -1,9 +1,9 @@
 package co.edu.uptc.model;
 
-public class NumberSimpleList {
+public class SimpleList {
 	private Node head;
 
-	public NumberSimpleList() {
+	public SimpleList() {
 		this.head = null;
 	}
 

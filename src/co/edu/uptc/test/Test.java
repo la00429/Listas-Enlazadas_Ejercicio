@@ -1,21 +1,21 @@
 package co.edu.uptc.test;
 
-import co.edu.uptc.model.NumberSimpleList;
+import co.edu.uptc.model.SimpleList;
 import co.edu.uptc.view.View;
 
 public class Test {
 	private final String MENU = "1. Insertar dato" + "\n" + "2. Verificar existencia" + "\n" + "3. Remover dato" + "\n"
 			+ "4. Verifar lista vacia" +"\n"+ "5. Mostrar lista" + "\n" + "0. salir";
 
-	private NumberSimpleList list;
+	private SimpleList list;
 	private View view;
 
 	public Test() {
-		this.list = new NumberSimpleList();
+		this.list = new SimpleList();
 		this.view = new View();
 	}
 
-	public NumberSimpleList getList() {
+	public SimpleList getList() {
 		return list;
 	}
 
