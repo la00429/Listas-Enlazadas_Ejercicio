@@ -1,18 +1,18 @@
 package co.edu.uptc.model;
 
-public class SimpleList {
-	private Node head;
+public class SimpleList<E> {
+	private Node<E> head;
 
 	public SimpleList() {
 		this.head = null;
 	}
 
-	public void insert(int data) {
-		Node node = new Node(data);
+	public void insert(E data) {
+		Node<E> node = new Node<E>(data);
 		if (isEmpty()) {
 			head = node;
 		} else {
-			Node nodeAux = head;
+			Node<E>  nodeAux = head;
 			while (nodeAux.getNext() != null) {
 				nodeAux = nodeAux.getNext();
 			}
@@ -20,9 +20,9 @@ public class SimpleList {
 		}
 	}
 
-	public boolean exist(int data) {
+	public boolean exist(E data) {
 		boolean nodeExist = false;
-		Node nodeAux = head;
+		Node<E>  nodeAux = head;
 		while (nodeAux != null && nodeExist == false) {
 			if (nodeAux.getValue().equals(data)) {
 				nodeExist = true;
@@ -33,9 +33,9 @@ public class SimpleList {
 
 	}
 
-	public void remove(int data) {
-		Node nodeAux = head;
-		Node previus = head;
+	public void remove(E data) {
+		Node<E>  nodeAux = head;
+		Node<E>  previus = head;
 		while (nodeAux != null) {
 			if (nodeAux.getValue().equals(data)) {
 				removeNodeFound(nodeAux, previus);
@@ -44,8 +44,8 @@ public class SimpleList {
 		}
 	}
 
-	private void removeNodeFound(Node nodeAux, Node previus) {
-		Node nodeToRemove = nodeAux;
+	private void removeNodeFound(Node<E>  nodeAux, Node<E>  previus) {
+		Node<E>  nodeToRemove = nodeAux;
 		if (nodeToRemove == head) {
 			head = nodeToRemove.getNext();
 		} else {
@@ -53,7 +53,7 @@ public class SimpleList {
 		}
 	}
 
-	private void previusReference(Node previus, Node nodeToRemove) {
+	private void previusReference(Node<E>  previus, Node<E>  nodeToRemove) {
 		while (previus.getNext() != nodeToRemove) {
 			previus = previus.getNext();
 		}

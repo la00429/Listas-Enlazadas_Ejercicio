@@ -7,15 +7,15 @@ public class Test {
 	private final String MENU = "1. Insertar dato" + "\n" + "2. Verificar existencia" + "\n" + "3. Remover dato" + "\n"
 			+ "4. Verifar lista vacia" +"\n"+ "5. Mostrar lista" + "\n" + "0. salir";
 
-	private SimpleList list;
+	private SimpleList<Integer> list;
 	private View view;
 
 	public Test() {
-		this.list = new SimpleList();
+		this.list = new SimpleList<Integer>();
 		this.view = new View();
 	}
 
-	public SimpleList getList() {
+	public SimpleList<Integer> getList() {
 		return list;
 	}
 
