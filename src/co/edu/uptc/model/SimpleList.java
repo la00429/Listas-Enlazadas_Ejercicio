@@ -24,7 +24,7 @@ public class SimpleList {
 		boolean nodeExist = false;
 		Node nodeAux = head;
 		while (nodeAux != null && nodeExist == false) {
-			if (nodeAux.getValue() == data) {
+			if (nodeAux.getValue().equals(data)) {
 				nodeExist = true;
 			}
 			nodeAux = nodeAux.getNext();
@@ -37,7 +37,7 @@ public class SimpleList {
 		Node nodeAux = head;
 		Node previus = head;
 		while (nodeAux != null) {
-			if (nodeAux.getValue() == data) {
+			if (nodeAux.getValue().equals(data)) {
 				removeNodeFound(nodeAux, previus);
 			}
 			nodeAux = nodeAux.getNext();

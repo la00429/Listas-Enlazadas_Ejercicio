@@ -1,14 +1,14 @@
 package co.edu.uptc.model;
 
-public class Node {
-	private int data;
+public class Node<E> {
+	private E data;
 	private Node next;
 
-	public Node(int data) {
+	public Node(E data) {
 		this.data = data;
 	}
 
-	public int getValue() {
+	public E getValue() {
 		return this.data;
 	}
 
