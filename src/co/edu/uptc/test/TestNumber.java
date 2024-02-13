@@ -3,14 +3,14 @@ package co.edu.uptc.test;
 import co.edu.uptc.structures.SimpleList;
 import co.edu.uptc.view.View;
 
-public class Test {
+public class TestNumber {
 	private final String MENU = "1. Insertar dato" + "\n" + "2. Verificar existencia" + "\n" + "3. Remover dato" + "\n"
 			+ "4. Verifar lista vacia" + "\n" + "5. Mostrar lista" + "\n" + "0. salir";
 
 	private SimpleList<Integer> list;
 	private View view;
 
-	public Test() {
+	public TestNumber() {
 		this.list = new SimpleList<Integer>();
 		this.view = new View();
 	}
@@ -122,7 +122,7 @@ public class Test {
 	}
 
 	public static void main(String[] args) {
-		Test test = new Test();
+		TestNumber test = new TestNumber();
 		test.principal();
 	}
 
