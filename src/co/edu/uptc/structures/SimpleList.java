@@ -1,6 +1,8 @@
 package co.edu.uptc.structures;
 
-public class SimpleList<E> {
+import java.util.Iterator;
+
+public class SimpleList<E> implements Iterable<E> {
 	private Node<E> head;
 
 	public SimpleList() {
@@ -12,7 +14,7 @@ public class SimpleList<E> {
 		if (isEmpty()) {
 			head = node;
 		} else {
-			Node<E>  nodeAux = head;
+			Node<E> nodeAux = head;
 			while (nodeAux.getNext() != null) {
 				nodeAux = nodeAux.getNext();
 			}
@@ -22,7 +24,7 @@ public class SimpleList<E> {
 
 	public boolean exist(E data) {
 		boolean nodeExist = false;
-		Node<E>  nodeAux = head;
+		Node<E> nodeAux = head;
 		while (nodeAux != null && nodeExist == false) {
 			if (nodeAux.getValue().equals(data)) {
 				nodeExist = true;
@@ -34,8 +36,8 @@ public class SimpleList<E> {
 	}
 
 	public void remove(E data) {
-		Node<E>  nodeAux = head;
-		Node<E>  previus = head;
+		Node<E> nodeAux = head;
+		Node<E> previus = head;
 		while (nodeAux != null) {
 			if (nodeAux.getValue().equals(data)) {
 				removeNodeFound(nodeAux, previus);
@@ -44,8 +46,8 @@ public class SimpleList<E> {
 		}
 	}
 
-	private void removeNodeFound(Node<E>  nodeAux, Node<E>  previus) {
-		Node<E>  nodeToRemove = nodeAux;
+	private void removeNodeFound(Node<E> nodeAux, Node<E> previus) {
+		Node<E> nodeToRemove = nodeAux;
 		if (nodeToRemove == head) {
 			head = nodeToRemove.getNext();
 		} else {
@@ -53,7 +55,7 @@ public class SimpleList<E> {
 		}
 	}
 
-	private void previusReference(Node<E>  previus, Node<E>  nodeToRemove) {
+	private void previusReference(Node<E> previus, Node<E> nodeToRemove) {
 		while (previus.getNext() != nodeToRemove) {
 			previus = previus.getNext();
 		}
@@ -67,5 +69,29 @@ public class SimpleList<E> {
 	public String show() {
 		return this.head.toString();
 
+	}
+
+	@Override
+	public Iterator<E> iterator() {
+		Iterator<E> iterator;
+		return iterator = new Iterator<E>() {
+			// Atributo de la clase anónima;
+			Node<E> actual = head;
+
+			@Override
+			public boolean hasNext() {
+				// TODO Auto-generated method stub
+				return actual != null;
+			}
+
+			@Override
+			public E next() {
+				E data = actual.getValue();
+				actual = actual.getNext();
+
+				return data;
+			}
+
+		};
 	}
 }

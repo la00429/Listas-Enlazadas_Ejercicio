@@ -21,6 +21,8 @@ public class TestStudent {
 		listStudent.remove(student3);
 		System.out.println(listStudent.isEmpty());
 		System.out.println(listStudent.show());
+		//para poder ubicar un objeto por algún atributo es necesario hacer un casteo del objeto que se quiere buscar. Con un get. 
+		
 
 	}
 

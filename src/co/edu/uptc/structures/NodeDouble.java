@@ -1,10 +1,10 @@
 package co.edu.uptc.structures;
 
-public class NodeDouble <E>{
+public class NodeDouble<E> {
 	private NodeDouble<E> previus;
 	private E data;
 	private NodeDouble<E> next;
-	
+
 	public NodeDouble(E data) {
 		this.data = data;
 	}
@@ -28,13 +28,16 @@ public class NodeDouble <E>{
 	public void setNext(NodeDouble<E> next) {
 		this.next = next;
 	}
-	
-//	mostrar hacia atrás
-	@Override
-	public String toString() {
-		return next + "->" +data;
+
+	public String toStringByHead() {
+		return  data + "->" + next;
 	}
 	
+//	mostrar hacia atrás
+	public String toStringToHead() {
+		return previus + "->" + data;
+	}
+
 	
 
 }
